@@ -1,0 +1,48 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": false,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [
+          "components\/*",
+          "containers\/*",
+          "store\/*",
+          "assets\/*"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages"
+    ],
+    "no-restricted-globals": [
+      "off"
+    ],
+    "react/forbid-prop-types": [
+      "off"
+    ],
+    "import/prefer-default-export": [
+      "off"
+    ],
+    "class-methods-use-this": [
+      "off"
+    ]
+  }
+}
