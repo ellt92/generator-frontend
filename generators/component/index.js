@@ -1,4 +1,4 @@
-var Generator = require('yeoman-generator');
+const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
   prompting() {
@@ -13,11 +13,19 @@ module.exports = class extends Generator {
       name: 'functional',
       message: 'Would you like your component to be functional?',
       default: false,
+    },
+    {
+      type: 'confirm',
+      name: 'container',
+      message: 'Would you like your component to be a container?',
+      when: answers => !answers.functional,
+      default: false,
     }]).then((answers) => {
       this.log('Component name', answers.classname);
       this.log('Functional component', answers.functional);
       this.options = {
         functional: answers.functional,
+        container: answers.container,
         classname: answers.classname,
       };
     });
@@ -28,6 +36,7 @@ module.exports = class extends Generator {
       this.destinationPath(`${this.options.classname}/index.jsx`),
       {
         functional: this.options.functional,
+        container: this.options.container,
         classname: this.options.classname,
       },
     );
