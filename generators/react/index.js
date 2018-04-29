@@ -20,6 +20,7 @@ module.exports = class extends Generator {
       [
         "react",
         "react-dom",
+        "prop-types",
         "react-router-dom",
         "react-router-config",
         "history"
