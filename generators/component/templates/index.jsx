@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 <% if (container) { -%>
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 <% } -%>
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import './styles.scss';
+import "./styles.scss";
 
 <% if (!functional) { -%>
 class <%= classname %> extends Component {

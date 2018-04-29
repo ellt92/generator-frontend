@@ -1,21 +1,21 @@
-const path = require('path');
-const shared = require('./webpack.shared');
-const ManifestPlugin = require('webpack-manifest-plugin');
-
+const path = require("path");
+const shared = require("./webpack.shared");
+const ManifestPlugin = require("webpack-manifest-plugin");
 
 module.exports = Object.assign({}, shared, {
   entry: [
-    'babel-polyfill',
-    path.resolve(__dirname, '<%= source %>', '<%= entry %>'),
+    "babel-polyfill",
+    path.resolve(__dirname, "../<%= source %>", "<%= entry %>")
   ],
-  mode: 'production',
+  mode: "production",
   output: {
-    path: path.resolve('<%= destination %>'),
-    filename: 'index.bundle-[chunkhash].js',
+    path: path.resolve("<%= destination %>"),
+    filename: "index.bundle-[chunkhash].js"
   },
   plugins: [
+    ...shared.plugins,
     new ManifestPlugin({
-      fileName: 'manifest.json',
-    }),
-  ],
+      fileName: "manifest.json"
+    })
+  ]
 });

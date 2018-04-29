@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallowWithState } from "enzyme-redux";
 
 import <%= classname %> from '../';
 
@@ -19,7 +19,7 @@ import <%= classname %> from '../';
 
 describe('<%= classname %>', () => {
   test('is rendered', () => {
-    const component = shallow(<<%= classname %> />);
+    const component = shallowWithState(<<%= classname %> />, {});
     expect(component.find('<%= classname %>')).toHaveLength(1);
   });
 });

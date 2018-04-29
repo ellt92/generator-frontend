@@ -1,10 +1,12 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
   "env": {
     "browser": true,
     "jest": true
   },
   "rules": {
+    "prettier/prettier": "error",
     "func-names": [
       "error",
       "never"
@@ -24,7 +26,10 @@
           "components\/*",
           "containers\/*",
           "store\/*",
-          "assets\/*"
+          "assets\/*",
+          "server\/*",
+          "helpers",
+          "tools"
         ]
       }
     ],
@@ -42,6 +47,9 @@
       "off"
     ],
     "class-methods-use-this": [
+      "off"
+    ],
+    "react/require-default-props": [
       "off"
     ]
   }
