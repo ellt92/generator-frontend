@@ -45,7 +45,6 @@ module.exports = class extends Generator {
     const webpackDev = "webpack.config.dev.js";
     const webpackProd = "webpack.config.prod.js";
     const webpackShared = "webpack.shared.js";
-    const webpackDevServer = "webpackDevServer.js";
     const indexHtml = "index.html";
 
     this.log("Writing webpack files...");
@@ -75,11 +74,6 @@ module.exports = class extends Generator {
       {
         source: this.options.source
       }
-    );
-    this.fs.copyTpl(
-      this.templatePath(webpackDevServer),
-      this.destinationPath(`config/${webpackDevServer}`),
-      {}
     );
     this.fs.copyTpl(
       this.templatePath(indexHtml),

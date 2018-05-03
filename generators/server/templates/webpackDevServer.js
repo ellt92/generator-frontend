@@ -1,12 +1,13 @@
 import webpack from "webpack";
+import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackConfig from "./webpack.config.dev";
 
-export function configureDevServer(app) {
+export default function configureDevServer(app) {
   const compiler = webpack(webpackConfig);
 
   // eslint-disable-next-line global-require
   app.use(
-    require("webpack-dev-middleware")(compiler, {
+    webpackDevMiddleware(compiler, {
       noInfo: true,
       publicPath: webpackConfig.output.publicPath,
       hot: true,
@@ -21,5 +22,3 @@ export function configureDevServer(app) {
   // eslint-disable-next-line global-require
   app.use(require("webpack-hot-middleware")(compiler));
 }
-
-export default {};
