@@ -1,4 +1,9 @@
+<% if (!functional) { -%>
 import React, { Component } from "react";
+<% } -%>
+<% if (functional) { -%>
+import React from "react";
+<% } -%>
 <% if (container) { -%>
 import { connect } from "react-redux";
 <% } -%>
@@ -27,7 +32,9 @@ class <%= classname %> extends Component {
 <% } -%>
 <% if (functional) { -%>
 const <%= classname %> = () => (
-  <div className="<%= classname %>">This is a <%= classname %>.</div>
+  <div className="<%= classname %>">
+    <div>This is a <%= classname %>.</div>
+  </div>
 );
 <% } -%>
 

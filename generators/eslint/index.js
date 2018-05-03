@@ -34,7 +34,8 @@ module.exports = class extends Generator {
         "eslint-plugin-import",
         "eslint-plugin-jest",
         "eslint-plugin-jsx-a11y",
-        "eslint-plugin-react"
+        "eslint-plugin-react",
+        "eslint-plugin-ejs"
       ],
       {
         save: true
