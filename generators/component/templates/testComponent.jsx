@@ -11,8 +11,8 @@ import ShallowRenderer from "react-test-renderer/shallow";
 
 describe("<%= classname %>", () => {
   const renderer = new ShallowRenderer();
-  const component = renderer.render(<<%= classname %> loading />);
   test("snapshot", () => {
+    const component = renderer.render(<<%= classname %> />);
     expect(component).toMatchSnapshot();
   });
 });
