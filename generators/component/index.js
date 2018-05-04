@@ -54,7 +54,7 @@ module.exports = class extends Generator {
         this.options.container ? "testContainer.jsx" : "testComponent.jsx"
       ),
       this.destinationPath(
-        `${this.options.classname}/__tests__/${this.options.classname}.test.jsx`
+        `${this.options.classname}/__tests__/index.test.jsx`
       ),
       {
         classname: this.options.classname
