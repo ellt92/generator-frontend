@@ -3,19 +3,47 @@ import { shallow } from "enzyme";
 
 import <%= classname %> from "../";
 
-// describe("<%= classname %>", () => {
-//   const component = shallow(<<%= classname %> />);
-//   test("this happens", () => {
-//   });
-// });
+/*
+ * SnapShot Test
+ *
 
-// describe("<%= classname %>", () => {
-//   const component = shallow(<<%= classname %> />);
-//   describe("when ...", () => {
-//     test("then ...", () => {
-//     });
-//   });
-// });
+import ShallowRenderer from "react-test-renderer/shallow";
+
+describe("<%= classname %>", () => {
+  const renderer = new ShallowRenderer();
+  const component = renderer.render(<<%= classname %> loading />);
+  test("snapshot", () => {
+    expect(component).toMatchSnapshot();
+  });
+});
+
+*/
+
+/*
+ * Render test
+ *
+
+describe("<%= classname %>", () => {
+  const component = shallow(<<%= classname %> />);
+  test("this happens", () => {
+  });
+});
+
+*/
+
+/*
+ * Given When Then test
+ *
+
+describe("<%= classname %>", () => {
+  const component = shallow(<<%= classname %> />);
+  describe("when ...", () => {
+    test("then ...", () => {
+    });
+  });
+});
+
+*/
 
 describe("<%= classname %>", () => {
   test("is rendered", () => {
