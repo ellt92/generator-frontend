@@ -43,7 +43,7 @@ const <%= classname %> = () => (
 <% if (container) { -%>
 const mapDispatchToProps = dispatch => ({
   onUnload: () => {
-    dispatch(() => {};
+    dispatch(() => {});
   },
   onLoad: () => {
     dispatch(() => {});
