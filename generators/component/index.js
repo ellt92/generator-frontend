@@ -51,7 +51,7 @@ module.exports = class extends Generator {
     );
     this.fs.copyTpl(
       this.templatePath(
-        this.options.container ? "testContainer.jsx" : "testContainer.jsx"
+        this.options.container ? "testContainer.jsx" : "testComponent.jsx"
       ),
       this.destinationPath(
         `${this.options.classname}/__tests__/${this.options.classname}.test.jsx`
